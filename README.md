@@ -11,7 +11,8 @@ Voici un exemple de `Dockerfile` et de `helm chart` pour déployer une applicati
 
 ```dockerfile
 # Utilise une image de base avec CUDA (vérifie la version CUDA souhaitée)
-FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu22.04
+# https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/supported-tags.md
+FROM nvidia/cuda:12.8.1-devel-ubuntu24.04
 
 # Mettre à jour et installer les dépendances système
 RUN apt-get update && apt-get install -y --no-install-recommends \
